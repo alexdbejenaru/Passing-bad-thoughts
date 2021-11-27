@@ -9,7 +9,7 @@ const App = () => {
   const [ thoughts, setThoughts ] = useState([
     {
       id: generateId(),
-      text: 'This is a place for your passing BAD thoughts',
+      text: 'This is the place to get rid of your bad thoughts',
       expiresAt: getNewExpirationTime(),
     },
     {
@@ -31,7 +31,7 @@ const App = () => {
     <main>
       <section className="app-container">
         <header>
-          <h1>Forget your bad thoughts</h1>
+          <h1>Forget about your bad thoughts</h1>
         </header>
         <section>
           <AddThoughtForm addThought={addThought} />
