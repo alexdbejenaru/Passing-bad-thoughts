@@ -16,6 +16,7 @@ function Thought(props) {
 
   return (
     <li className="Thought">
+      <div className="text">{thought.text}</div>
       <button
         aria-label="Remove thought"
         className="remove-button"
@@ -23,7 +24,6 @@ function Thought(props) {
       >
         &times;
       </button>
-      <div className="text">{thought.text}</div>
     </li>
   );
 }

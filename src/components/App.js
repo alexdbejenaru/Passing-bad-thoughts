@@ -3,6 +3,8 @@ import { generateId, getNewExpirationTime } from '../utilities';
 import AddThoughtForm from './AddThoughtForm';
 import Thought from './Thought';
 import React, { useState } from "react";
+import logo from '../images/_for__get_.png'
+import styled from "styled-components";
 
 const App = () => {
 
@@ -29,11 +31,12 @@ const App = () => {
 
   return (
     <main>
+      <Wrapper>
       <section className="app-container">
         <header>
-          <h1>Forget about your bad thoughts</h1>
+          <img className="logo" src={logo} alt="for-get" />
         </header>
-        <section>
+        <section className="add-thoughts">
           <AddThoughtForm addThought={addThought} />
           <ul className="thoughts">
             {thoughts.map((thought) => (
@@ -42,8 +45,18 @@ const App = () => {
           </ul>
         </section>
       </section>
+      </Wrapper>
     </main>
   );
 };
+
+const Wrapper = styled.section`
+  .add-thoughts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+`;
 
 export default App;

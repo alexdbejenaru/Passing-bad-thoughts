@@ -1,5 +1,6 @@
 import { generateId, getNewExpirationTime } from "../utilities";
 import { useState } from "react";
+import styled from "styled-components";
 
 const AddThoughtForm = (props) => {
 
@@ -7,6 +8,7 @@ const AddThoughtForm = (props) => {
     const handleTextChange = ( event ) => {
         setText(event.target.value);
     };
+
     const handleSubmit = ( event ) => {
         event.preventDefault();
         const thought = {
@@ -21,8 +23,8 @@ const AddThoughtForm = (props) => {
         }
     }
     return ( 
-        <>
-            <form className="AddThoughtForm" onSubmit={handleSubmit}>
+        <Wrapper>
+            <form className="add-thought-form" onSubmit={handleSubmit}>
                 <input
                     value={text}
                     onChange={handleTextChange}
@@ -30,10 +32,19 @@ const AddThoughtForm = (props) => {
                     aria-label="What's on your mind?"
                     placeholder="What's on your mind?"
                 />
-                <input type="submit" value="Add"  />
+                <button type="submit" value="Let it go">Let it go</button>
             </form>
-        </>
+        </Wrapper>
      );
 }
- 
+
+const Wrapper = styled.section`
+    & {
+        .add-thought-form {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+`;
+
 export default AddThoughtForm;
