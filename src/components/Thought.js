@@ -35,10 +35,22 @@ const Wrapper = styled.section`
   & {
     li {
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       border: 1px solid #3E6765;
       border-radius: 10px;
       padding: 10px;
+      margin-top: 20px;
+      text-align: center;
+      max-width: 60vh;
+
+      button {
+        padding: 10px;
+        border-radius: 10px;
+        border: none;
+        color: white;
+        background-color: #3E6765;
+        margin-top: 10px;
+      }
     }
   }
 `;
