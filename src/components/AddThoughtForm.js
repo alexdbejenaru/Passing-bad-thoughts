@@ -42,7 +42,20 @@ const Wrapper = styled.section`
     & {
         .add-thought-form {
             display: flex;
-            flex-direction: column;
+
+            input {
+                padding: 20px;
+                width: 300px;
+                border: none;
+                border-radius: 10px;
+            }
+
+            button {
+                margin-left: 30px;
+                padding: 20px;
+                border: none;
+                border-radius: 10px;
+            }
         }
     }
 `;
