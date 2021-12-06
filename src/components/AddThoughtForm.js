@@ -46,12 +46,14 @@ const Wrapper = styled.section`
             input {
                 padding: 20px;
                 width: 300px;
-                border: none;
+                border: 1px solid #3E6765;
                 border-radius: 10px;
             }
 
             button {
                 margin-left: 30px;
+                background-color: #3E6765;
+                color: white;
                 padding: 20px;
                 border: none;
                 border-radius: 10px;
