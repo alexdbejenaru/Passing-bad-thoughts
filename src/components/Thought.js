@@ -33,15 +33,17 @@ function Thought(props) {
 
 const Wrapper = styled.section`
   & {
+    width: 60vh;
+    
     li {
       display: flex;
       flex-direction: column;
       border: 1px solid #3E6765;
       border-radius: 10px;
       padding: 10px;
+      margin: 0 auto;
       margin-top: 20px;
       text-align: center;
-      max-width: 60vh;
 
       button {
         padding: 10px;
