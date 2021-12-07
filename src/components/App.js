@@ -4,19 +4,13 @@ import AddThoughtForm from './AddThoughtForm';
 import Thought from './Thought';
 import React, { useState } from "react";
 import logo from '../images/_for__get_.png'
-import styled from "styled-components";
 
 const App = () => {
 
   const [ thoughts, setThoughts ] = useState([
     {
       id: generateId(),
-      text: 'This is the place to get rid of your bad thoughts',
-      expiresAt: getNewExpirationTime(),
-    },
-    {
-      id: generateId(),
-      text: 'They will be removed after 15 seconds so you can forget about them',
+      text: 'This is the place to get rid of them',
       expiresAt: getNewExpirationTime(),
     },
   ]);
@@ -31,36 +25,22 @@ const App = () => {
 
   return (
     <main>
-      <Wrapper>
-      <section className="app-container">
-        <header>
-          <img className="logo" src={logo} alt="for-get" />
-        </header>
-        <section className="add-thoughts">
-          <AddThoughtForm addThought={addThought} />
-          <ul className="thoughts">
-            {thoughts.map((thought) => (
-              <Thought key={thought.id} thought={thought} removeThought={removeThought} />
-            ))}
-          </ul>
+        <section className="app-container">
+          <header className="header">
+            <img className="logo" src={logo} alt="for-get" />
+          </header>
+          <h3 className="small-title">Do you have any bad thoughts that are ruining your day?</h3>
+          <section className="add-thoughts">
+            <AddThoughtForm addThought={addThought} />
+            <ul className="thoughts">
+              {thoughts.map((thought) => (
+                <Thought key={thought.id} thought={thought} removeThought={removeThought} />
+              ))}
+            </ul>
+          </section>
         </section>
-      </section>
-      </Wrapper>
     </main>
   );
 };
-
-const Wrapper = styled.section`
-  .add-thoughts {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-
-  .logo {
-    margin: 0 auto;
-  }
-`;
 
 export default App;
