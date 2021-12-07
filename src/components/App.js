@@ -57,9 +57,7 @@ const Wrapper = styled.section`
     align-items: center;
     flex-direction: column;
   }
-  .header {
-    margin: 0 auto;
-  }
+
   .logo {
     margin: 0 auto;
   }

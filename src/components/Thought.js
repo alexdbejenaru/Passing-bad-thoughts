@@ -52,6 +52,11 @@ const Wrapper = styled.section`
         color: white;
         background-color: #3E6765;
         margin-top: 10px;
+        cursor: pointer;
+
+          &:hover {
+            box-shadow: 1px 3px 6px 1px hsla(177, 25%, 32%, .5);
+          }
       }
     }
   }

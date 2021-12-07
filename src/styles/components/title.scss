@@ -1,6 +1,12 @@
 @use '../utils' as *;
-
+.header {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+}
 .logo {
     width: rem(500px);
+    height: fit-content;
     margin: 0 auto;
 }

@@ -57,6 +57,12 @@ const Wrapper = styled.section`
                 padding: 20px;
                 border: none;
                 border-radius: 10px;
+                cursor: pointer;
+
+                &:hover {
+                    box-shadow: 1px 3px 6px 1px hsla(177, 25%, 32%, .5);
+;
+                }
             }
         }
     }
