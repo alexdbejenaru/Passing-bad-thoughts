@@ -10,7 +10,7 @@ const App = () => {
   const [ thoughts, setThoughts ] = useState([
     {
       id: generateId(),
-      text: 'This is the place to get rid of them',
+      text: 'This is the place to get rid of them. They will dissapear after 15 seconds',
       expiresAt: getNewExpirationTime(),
     },
   ]);
