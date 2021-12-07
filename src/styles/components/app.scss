@@ -33,6 +33,11 @@ main {
       font-family: var(--font-general);
       font-weight: var(--font-regular);
       margin-bottom: 20px;
+      text-align: center;
+
+      @include breakpoint-down(medium) {
+        max-width: rem(300px);
+    }
     }
 
     .add-thoughts {
@@ -53,6 +58,10 @@ main {
   margin: 0 auto;
   margin-top: 20px;
   text-align: center;
+
+  @include breakpoint-down(medium) {
+    max-width: rem(300px);
+  }
 }
 
 button {
@@ -72,6 +81,11 @@ button {
 .add-thought-form {
   display: flex;
 
+  @include breakpoint-down(medium) {
+    max-width: rem(300px);
+    flex-direction: column;
+}
+
   input {
       padding: 20px;
       width: 300px;
@@ -83,6 +97,11 @@ button {
       margin-left: 30px;
       padding: 20px;
       margin-top: initial;
+
+      @include breakpoint-down(medium) {
+        margin-left: initial;
+        margin-top: rem(20px);
+      }
   }
 }
 
