@@ -11,6 +11,10 @@ main {
     max-height: 600px;
     width: 60%;
     max-width: 550px;
+
+    @include breakpoint-down(medium) {
+      max-width: 90vw;
+    }
     
     .header {
       display: flex;
@@ -45,6 +49,10 @@ main {
       justify-content: center;
       align-items: center;
       flex-direction: column;
+
+      @include breakpoint-down(medium) {
+        max-width: 90vw;
+      }
     }
   }
 }
@@ -60,7 +68,7 @@ main {
   text-align: center;
 
   @include breakpoint-down(medium) {
-    max-width: rem(300px);
+    max-width: 90vw;
   }
 }
 
@@ -88,9 +96,14 @@ button {
 
   input {
       padding: 20px;
-      width: 300px;
+      width: 400px;
       border: 1px solid #3E6765;
       border-radius: 10px;
+
+      @include breakpoint-down(medium) {
+        width: initial;
+        max-width: 90vw;
+      }
   }
 
   button {
